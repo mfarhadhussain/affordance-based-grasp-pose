@@ -1,3 +1,6 @@
 [submodule "detectron2"]
 	path = detectron2
 	url = https://github.com/facebookresearch/detectron2.git
+[submodule "pybullet-URDF-models"]
+	path = pybullet-URDF-models
+	url = https://github.com/ChenEating716/pybullet-URDF-models.git
