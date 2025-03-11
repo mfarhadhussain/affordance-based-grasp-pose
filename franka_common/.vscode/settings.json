@@ -1,0 +1,24 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/mdfh/ros2_ws/build/franka_sim",
+        "/home/mdfh/ros2_ws/install/franka_sim/lib/python3.10/site-packages",
+        "/home/mdfh/ros2_ws/build/franka_real",
+        "/home/mdfh/ros2_ws/install/franka_real/lib/python3.10/site-packages",
+        "/home/mdfh/ros2_ws/build/franka_common",
+        "/home/mdfh/ros2_ws/install/franka_common/lib/python3.10/site-packages",
+        "/home/mdfh/ros2_ws/install/custom_interfaces/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/mdfh/ros2_ws/build/franka_sim",
+        "/home/mdfh/ros2_ws/install/franka_sim/lib/python3.10/site-packages",
+        "/home/mdfh/ros2_ws/build/franka_real",
+        "/home/mdfh/ros2_ws/install/franka_real/lib/python3.10/site-packages",
+        "/home/mdfh/ros2_ws/build/franka_common",
+        "/home/mdfh/ros2_ws/install/franka_common/lib/python3.10/site-packages",
+        "/home/mdfh/ros2_ws/install/custom_interfaces/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

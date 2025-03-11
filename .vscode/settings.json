@@ -1,0 +1,19 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/mdfh/ros2_workspace/build/simple_package_python",
+        "/home/mdfh/ros2_workspace/install/simple_package_python/lib/python3.10/site-packages",
+        "/home/mdfh/ros2_workspace/build/python_package_with_library",
+        "/home/mdfh/ros2_workspace/install/python_package_with_library/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/mdfh/ros2_workspace/build/simple_package_python",
+        "/home/mdfh/ros2_workspace/install/simple_package_python/lib/python3.10/site-packages",
+        "/home/mdfh/ros2_workspace/build/python_package_with_library",
+        "/home/mdfh/ros2_workspace/install/python_package_with_library/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "cmake.sourceDirectory": "/home/mdfh/ros2_ws/src/custom_interfaces"
+}
