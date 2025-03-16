@@ -4,6 +4,6 @@
 [submodule "pybullet-URDF-models"]
 	path = pybullet-URDF-models
 	url = https://github.com/ChenEating716/pybullet-URDF-models.git
-[submodule "dl_model/dl_model/Language-Conditioned-Affordance-Pose-Detection-in-3D-Point-Clouds"]
-	path = dl_model/dl_model/Language-Conditioned-Affordance-Pose-Detection-in-3D-Point-Clouds
+[submodule "dl_model/Language-Conditioned-Affordance-Pose-Detection-in-3D-Point-Clouds"]
+	path = dl_model/Language-Conditioned-Affordance-Pose-Detection-in-3D-Point-Clouds
 	url = https://github.com/Fsoft-AIC/Language-Conditioned-Affordance-Pose-Detection-in-3D-Point-Clouds.git
