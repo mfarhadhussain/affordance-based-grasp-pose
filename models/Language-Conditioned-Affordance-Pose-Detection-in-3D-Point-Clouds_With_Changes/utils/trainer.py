@@ -65,8 +65,10 @@ class Trainer(object):
         raise NotImplementedError
 
     def run(self):
-        EPOCH = self.cfg.training_cfg.epoch
-        workflow = self.cfg.training_cfg.workflow
+        # EPOCH = self.cfg.training_cfg.epoch
+        EPOCH = self.cfg.training_cfg["epoch"]
+        # workflow = self.cfg.training_cfg.workflow
+        workflow = self.cfg.training_cfg["workflow"]
         
         while self.epoch < EPOCH:
             for key, running_epoch in workflow.items():

@@ -36,7 +36,9 @@ def build_model(cfg):
         weights_init = model_info.get('weights_init', None)
         background_text = model_info.get('background_text', 'none')
         device = model_info.get('device', torch.device('cuda'))
-        model_name = model_info.type
+        # model_name = model_info.type
+        model_name = model_info["type"]
+        
         model_cls = model_pool[model_name]
         if model_name in ['detectiondiffusion']:
             betas = model_info.get('betas', [1e-4, 0.02])
@@ -78,7 +80,7 @@ def build_loader(cfg, dataset_dict):
     Function to build the loader
     """
     train_set = dataset_dict["train_set"]
-    train_loader = DataLoader(train_set, batch_size=cfg.training_cfg.batch_size,
+    train_loader = DataLoader(train_set, batch_size=cfg.training_cfg["batch_size"], # changed cfg.training_cfg.batch_size to cfg.training_cfg["batch_size"]
                               shuffle=True, drop_last=False, num_workers=8)
     loader_dict = dict(
         train_loader=train_loader,
@@ -92,7 +94,8 @@ def build_optimizer(cfg, model):
     Function to build the optimizer
     """
     optimizer_info = cfg.optimizer
-    optimizer_type = optimizer_info.type
+    # optimizer_type = optimizer_info.type
+    optimizer_type = optimizer_info["type"]
     optimizer_info.pop('type')
     optimizer_cls = optimizer_pool[optimizer_type]
     optimizer = optimizer_cls(model.parameters(), **optimizer_info)
