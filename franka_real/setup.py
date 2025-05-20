@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "franka_real_camera_node=franka_real.franka_real_camera:main",
+            "franka_real_camera_node=franka_real.franka_real_camera_node:main",
         ],
     },
 )

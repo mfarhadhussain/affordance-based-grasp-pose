@@ -4,3 +4,6 @@
 [submodule "pybullet-URDF-models"]
 	path = pybullet-URDF-models
 	url = https://github.com/ChenEating716/pybullet-URDF-models.git
+[submodule "joint_affordance_and_pose_with_dpm"]
+	path = joint_affordance_and_pose_with_dpm
+	url = https://github.com/mfarhadhussain/joint_affordance_and_pose_with_dpm.git

@@ -1,5 +1,7 @@
 # Object.msg
 std_msgs/Header header
-sensor_msgs/PointCloud downsampled_pcd
+sensor_msgs/PointCloud model_points
 std_msgs/Float32MultiArray affordance_label
 std_msgs/Float32MultiArray pose
+std_msgs/Float32MultiArray single_target_pose
+# geometry_msgs/PointStamped pcd_centroid

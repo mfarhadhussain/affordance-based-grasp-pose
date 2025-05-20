@@ -26,9 +26,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "model_node=franka_common.model:main",
-            "object_pcd_visualizer_node=franka_common.object_pcd_visualizer:main",
-            "affordance_pose_plot_node=franka_common.affordance_pose_plot:main",
+            "model_node=franka_common.model_node:main",
+            "object_pcd_visualizer_node=franka_common.object_pcd_visualizer_node:main",
+            "affordance_pose_plot_node=franka_common.affordance_pose_plot_node:main",
         ],
     },
 )

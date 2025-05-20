@@ -179,18 +179,19 @@ def main():
         p.stepSimulation()
         sim_franka.update_scene()
         
-        # --- Update the camera attached at the end effector ---
-        _, _, rgb, _, _ = sim_franka.camera.update(sim_franka.robot_id, sim_franka.end_effector_index)
+    #     # # --- Update the camera attached at the end effector ---
+    # I have removed the camera functionality from this script
+    #     _, _, rgb, _, _ = sim_franka.camera.update(sim_franka.robot_id, sim_franka.end_effector_index)
         
-        # Process and display the camera image using OpenCV.
-        rgb_array = np.array(rgb, dtype=np.uint8).reshape((720, 720, 3))
-        rgb_bgr = cv2.cvtColor(rgb_array[:, :, :3], cv2.COLOR_RGB2BGR)
-        cv2.imshow("End Effector Camera", rgb_bgr)
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
-        time.sleep(0.01)
+    #     # Process and display the camera image using OpenCV.
+    #     rgb_array = np.array(rgb, dtype=np.uint8).reshape((720, 720, 3))
+    #     rgb_bgr = cv2.cvtColor(rgb_array[:, :, :3], cv2.COLOR_RGB2BGR)
+    #     cv2.imshow("End Effector Camera", rgb_bgr)
+    #     if cv2.waitKey(1) & 0xFF == ord('q'):
+    #         break
+    #     time.sleep(0.01)
         
-    cv2.destroyAllWindows()
+    # cv2.destroyAllWindows()
     p.disconnect()
 
 if __name__ == "__main__":

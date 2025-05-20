@@ -4,14 +4,15 @@ import torch
 from types import SimpleNamespace
 import numpy as np 
 
-dl_model_path = '/home/mdfh/ros2_ws/src/dl_model/Language-Conditioned-Affordance-Pose-Detection-in-3D-Point-Clouds'
+dl_model_path = '/home/mdfh/open_vocab_ws/src/dl_model/Language-Conditioned-Affordance-Pose-Detection-in-3D-Point-Clouds'
 sys.path.append(dl_model_path)
+
 from utils.builder import *
 from utils.utils import *
 from utils.trainer import *
 
 
-model_weight_path = "/home/mdfh/ros2_ws/src/dl_model/Language-Conditioned-Affordance-Pose-Detection-in-3D-Point-Clouds/log/pn_bn2_latest.t7"
+model_weight_path = "/home/mdfh/open_vocab_ws/src/dl_model/Language-Conditioned-Affordance-Pose-Detection-in-3D-Point-Clouds/log/current_model.t7"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 
@@ -19,7 +20,7 @@ class Config:
     def __init__(self):
         self.seed = 1
         # self.log_dir = "/log"
-        self.log_dir = "/home/mdfh/ros2_ws/src/dl_model/Language-Conditioned-Affordance-Pose-Detection-in-3D-Point-Clouds/log"
+        self.log_dir = "/home/mdfh/open_vocab_ws/src/dl_model/Language-Conditioned-Affordance-Pose-Detection-in-3D-Point-Clouds/log"
         self.scheduler = None
 
         self.model = {
@@ -54,17 +55,17 @@ class Config:
         }
         
         self.data = SimpleNamespace(
-            data_path="/home/mdfh/ros2_ws/src/dl_model/Language-Conditioned-Affordance-Pose-Detection-in-3D-Point-Clouds/dataset/data.pkl",
+            data_path="/home/mdfh/open_vocab_ws/src/dl_model/Language-Conditioned-Affordance-Pose-Detection-in-3D-Point-Clouds/dataset/data.pkl",
             # data_path="/kaggle/input/affordance-datas/datas/data.pkl"
         )
         
         
-def load_model(model_weight_path=model_weight_path):
+def load_model(model_weight_path=model_weight_path, device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')):
     cfg = Config()
     device = "cuda" if torch.cuda.is_available() else "cpu"
     model = build_model(cfg).to(device)
     
-    checkpoint = torch.load(model_weight_path, weights_only=True)
+    checkpoint = torch.load(model_weight_path, map_location=device)
     
     new_checkpoint = {}
     for key, value in checkpoint.items():
@@ -77,5 +78,9 @@ def load_model(model_weight_path=model_weight_path):
     model.load_state_dict(new_checkpoint)
     
     return model
+
+
      
-     
+if __name__=="__main__": 
+    model = load_model(model_weight_path=model_weight_path)
+    print("Model is running on: ", model.device)

@@ -20,8 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "franka_sim_node=franka_sim.franka_sim:main",
-            "franka_sim_point_cloud_node=franka_sim.franka_sim_point_cloud:main",
+            "franka_sim_node=franka_sim.franka_sim_node:main",
+            "franka_sim_point_cloud_node=franka_sim.franka_sim_point_cloud_node:main",
         ],
     },
 )
