@@ -7,3 +7,6 @@
 [submodule "joint_affordance_and_pose_with_dpm"]
 	path = joint_affordance_and_pose_with_dpm
 	url = https://github.com/mfarhadhussain/joint_affordance_and_pose_with_dpm.git
+[submodule "affordance_and_pose_with_dpm"]
+	path = affordance_and_pose_with_dpm
+	url = https://github.com/mfarhadhussain/affordance_and_pose_with_dpm.git
