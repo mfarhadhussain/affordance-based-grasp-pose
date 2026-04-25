@@ -1,0 +1,51 @@
+point_encoder:
+  point_bert:
+    yaml: "/home/farhad/m-project/jointAP/ULIP/models/pointbert/PointTransformer_8192point.yaml"
+    ckpt: "/home/farhad/m-project/jointAP/ULIP/data/initialize_models/pretrained_models_ckpt_zero-sho_classification_checkpoint_pointbert.pt" 
+  pointnext:
+    yaml: "/home/farhad/m-project/jointAP/ULIP/models/pointnext/pointnext-s.yaml"
+    ckpt: "ULIP/data/initialize_models/pretrained_models_ckpt_zero-sho_classification_checkpoint_pointnext.pt"
+  
+
+dataset: 
+  data_file_path: "/home/farhad/m-project/affordance_and_pose/data/three_dap/full_shape_release.pkl" 
+
+diffusion: 
+  T: 50
+  schedule:
+    type: "cosine" # cosine   
+    beta_start: 0.0002
+    beta_end: 0.02 
+    s: 0.008 
+
+
+training:
+  batch_size: 64
+  lr: 0.00001
+  num_epochs: 150
+  drop_prob: 0.2
+  guidance_w: 1.0 
+  experiment_name: 'runs/bg_ddpm'
+
+
+inference: 
+  guidance_w: 1.0 
+  ckpt: ""
+
+
+
+  
+
+
+
+
+  
+
+
+    
+
+
+
+
+
+

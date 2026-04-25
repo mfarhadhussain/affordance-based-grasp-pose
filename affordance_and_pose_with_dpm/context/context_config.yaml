@@ -1,0 +1,36 @@
+dataset: 
+  data_file_path: "/home/farhad/m-project/affordance_and_pose/data/three_dap/full_shape_release.pkl"  
+
+xyz:
+  feats_dim: 64
+text:
+  feats_dim: 512 
+
+pointnext-s_c64: 
+  cfg: "/home/farhad/m-project/affordance_and_pose/PointNeXt/cfgs/shapenetpart/pointnext-s_c64.yaml"
+  ckpt: "/home/farhad/m-project/affordance_and_pose/checkpoints/pointnext/shapenetpart-train-pointnext-s_c64-ngpus4-seed7798-20220822-024210-ZcJ8JwCgc7yysEBWzkyAaE_ckpt_best.pth" 
+
+model: 
+  model_folder: "context/weights_mhcontext"
+  model_basename: "mh_context_pooled"
+  preload: "latest"
+
+training:
+  batch_size: 32
+  lr: 0.000005
+  num_epochs: 100
+  drop_prob: 0.2
+  seed: 11
+  experiment_name: 'context/runs/point_text_context'
+  threshold: 0.5
+  num_workers: 12
+  grad_clip: True
+  checkpoint_interval: 1
+
+    
+
+
+
+
+
+

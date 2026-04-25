@@ -1,0 +1,82 @@
+[
+  {
+    "model_type": "MINI_LM",
+    "pooled_time": 0.0021481037139892576,
+    "token_time": 0.002263188362121582,
+    "embed_dim": 384,
+    "param_count": 22713216,
+    "batch_size": 3,
+    "seq_length": 8,
+    "device": "cuda"
+  },
+  {
+    "model_type": "MOBILEBERT",
+    "pooled_time": 0.013623881340026855,
+    "token_time": 0.014958763122558593,
+    "embed_dim": 512,
+    "param_count": 24581888,
+    "batch_size": 3,
+    "seq_length": 8,
+    "device": "cuda"
+  },
+  {
+    "model_type": "TINY_BERT",
+    "pooled_time": 0.0017445802688598633,
+    "token_time": 0.0019130229949951172,
+    "embed_dim": 312,
+    "param_count": 14350248,
+    "batch_size": 3,
+    "seq_length": 8,
+    "device": "cuda"
+  },
+  {
+    "model_type": "ALBERT",
+    "pooled_time": 0.006251049041748047,
+    "token_time": 0.006303191184997559,
+    "embed_dim": 768,
+    "param_count": 11683584,
+    "batch_size": 3,
+    "seq_length": 8,
+    "device": "cuda"
+  },
+  {
+    "model_type": "DISTILBERT",
+    "pooled_time": 0.0030058145523071287,
+    "token_time": 0.00302734375,
+    "embed_dim": 768,
+    "param_count": 66362880,
+    "batch_size": 3,
+    "seq_length": 8,
+    "device": "cuda"
+  },
+  {
+    "model_type": "CLIP_VIT_B32",
+    "pooled_time": 0.01241607666015625,
+    "token_time": 0.011214423179626464,
+    "embed_dim": 512,
+    "param_count": 151277313,
+    "batch_size": 3,
+    "seq_length": 77,
+    "device": "cuda"
+  },
+  {
+    "model_type": "CLIP_RN50",
+    "pooled_time": 0.012324047088623048,
+    "token_time": 0.011159753799438477,
+    "embed_dim": 1024,
+    "param_count": 102007137,
+    "batch_size": 3,
+    "seq_length": 77,
+    "device": "cuda"
+  },
+  {
+    "model_type": "MOBILE_CLIP",
+    "pooled_time": 0.012545561790466309,
+    "token_time": 0.011400771141052247,
+    "embed_dim": 512,
+    "param_count": 149777153,
+    "batch_size": 3,
+    "seq_length": 77,
+    "device": "cuda"
+  }
+]

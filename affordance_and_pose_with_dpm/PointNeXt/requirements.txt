@@ -1,0 +1,26 @@
+# Core PointNeXt dependencies (with flexible versions where possible)
+scikit-learn>=1.0.2,<2.0.0  # Allows minor updates
+pickleshare==0.7.5           # Low-risk pinned dependency
+ninja>=1.10.2                # DeepSpeed needs newer versions
+gdown>=4.4.0                 # Modern version for stability
+easydict==1.9                # Pinned (likely critical for PointNeXt)
+PyYAML==6.0                  # Pinned (common compatibility requirement)
+protobuf>=3.20.2,<4.0.0      # Must be ≥3.20.2 for many modern packages
+tensorboard>=2.8.0,<2.9.0    # Slightly flexible for DeepSpeed compatibility
+termcolor==1.1.0             # Low-risk pinned
+tqdm>=4.64.0                 # Matches ultralytics' requirement
+multimethod==1.7             # Pinned
+h5py>=3.6.0,<4.0.0           # Slightly flexible for DeepSpeed
+matplotlib>=3.5.1,<4.0.0     # Flexible within v3.x
+wandb>=0.12.0                # Modern version for stability
+pyvista>=0.32.0              # Modern version
+setuptools>=59.5.0           # DeepSpeed may need newer versions
+Cython>=0.29.28              # Flexible
+pandas>=1.3.0                # Modern version (avoids conflicts)
+deepspeed>=0.6.0             # Modern version (may dictate other requirements)
+shortuuid>=1.0.0             # Flexible
+
+# Documentation (optional)
+mkdocs-material>=8.0.0
+mkdocs-awesome-pages-plugin>=2.0.0
+mdx_truly_sane_lists>=1.0.0
