@@ -91,7 +91,7 @@ The 3DAPNet model successfully generalizes object affordances and 6-DoF grasp po
 ## Citation
 
 ```bibtex
-@thesis{affordance-grasp-2024,
+@thesis{3d_lang_cond_af_pose_2025,
   title={Language-Conditioned Affordance-Based Grasp Pose Learning from 3D Point Clouds for Robotic Skill Generalization},
   author={Md Farhad Hussain and Dr. Ravi Prakash},
   school={Robert Bosch Centre for Cyber-Physical Systems, Indian Institute of Science, Bengaluru, India},
